@@ -17,6 +17,9 @@ function deviceShaken()
 {
 	r = r+20;
   background(r,0,0);
+  else{
+    r -= 2;
+  }
 
 }
 
