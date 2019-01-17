@@ -5,7 +5,7 @@ background(r,0,0);
 }
 
 function draw() {
-  r--;
+  r -= 2;
   //fill(0);
   //text(r,width/2,height/2);
  
