@@ -1,12 +1,4 @@
-/*
- * Creation & Computation - Digital Futures, OCAD University
- * Kate Hartman / Nick Puckett
- * 
- * remote controller that sends a variable to all the listening devices
- * phone only
- */
 
-// server variables
 
 var dataServer;
 var pubKey = 'pub-c-8efd8f87-9fe2-45a5-81f6-7b60513f5ddc';
@@ -26,6 +18,7 @@ var channelName = "train";
 function setup() 
 {
   button = createButton('coal');
+  button.size(100,100);
   button.position(65, 65);
   button.mousePressed(moreCoal);
 
@@ -46,8 +39,8 @@ function setup()
     background(r, g, b);
     noStroke();
     fill(0);  
-    textSize(90);
-    text("!SHOVEL!", width/2, height/2);
+    //textSize(90);
+    //text("!SHOVEL!", width/2, height/2);
 
 
 }
@@ -56,7 +49,7 @@ function draw() {
 background(r, g, b);
 speed--;
 if (r >= 0) {
-	r --;
+  r --;
 }
     console.log(coal);
 }
@@ -64,14 +57,19 @@ if (r >= 0) {
 
 ///uses built in deviceShaken function in p5
 function deviceShaken() 
+{
+  r = r+20;
 
-	r = r+20;
-
-if (coal>=0) {
-	speed += 4;
-	coal--;
 }
 
+if (coal!= 0) {
+  speed += 4;
+  coal--;
+}
+
+//console.log(slideNumber);
+
+  //publish the number to everyone.
   dataServer.publish(
     {
       channel: channelName,
@@ -83,6 +81,6 @@ if (coal>=0) {
 
 
 function moreCoal() {
-	coal+=20;
-	 r += 20;
+  coal+=20;
+  r = r+20;
 }
