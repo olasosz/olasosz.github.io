@@ -6,8 +6,8 @@ background(0,255,0);
 
 function draw() {
   
-  fill(0);
-  text(r,width/2,height/2);
+  //fill(0);
+  //text(r,width/2,height/2);
  
 }
 
