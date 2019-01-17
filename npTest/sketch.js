@@ -1,4 +1,4 @@
-var = 0;
+var r = 0;
 function setup() 
 {
 
