@@ -17,10 +17,10 @@ function deviceShaken()
 {
 	r = r+20;
   background(r,0,0);
-  else{
-if (r >=0) {
-    r -= 2;
-  }
+//   else{
+// if (r >=0) {
+//     r -= 2;
+//   }
 
 }
 
