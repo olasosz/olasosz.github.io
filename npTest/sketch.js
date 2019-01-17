@@ -1,7 +1,7 @@
 var r = 0;
 function setup() 
 {
-background(0,255,0);
+background(r,0,0);
 }
 
 function draw() {
@@ -16,7 +16,7 @@ function draw() {
 function deviceShaken() 
 {
 	r = r+20;
-  background(255,0,0);
+  background(r,0,0);
 
 }
 
