@@ -1,11 +1,11 @@
 var r = 0;
 function setup() 
 {
-
+background(0,255,0);
 }
 
 function draw() {
-  background(255);
+  
   fill(0);
   text(r,width/2,height/2);
  
@@ -16,6 +16,7 @@ function draw() {
 function deviceShaken() 
 {
 	r = r+20;
+  background(255,0,0);
 
 }
 
