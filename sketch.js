@@ -48,7 +48,7 @@ function setup()
     noStroke();
     fill(0);  
     //textSize(90);
-    //text("!SHOVEL!", width/2, height/2);
+    text("!SHOVEL!", width/2, height/2);
 
 
 }
