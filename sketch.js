@@ -65,16 +65,13 @@ if (r >= 0) {
 ///uses built in deviceShaken function in p5
 function deviceShaken() 
 
-	r= r+20;
+	r = r+20;
 
 if (coal>=0) {
 	speed += 4;
 	coal--;
 }
 
-//console.log(slideNumber);
-
-  //publish the number to everyone.
   dataServer.publish(
     {
       channel: channelName,
