@@ -49,7 +49,7 @@ function draw() {
 background(r, g, b);
 speed-= 2;
 if (r >= 0) {
-  r -= 5;
+  r = r-20;
 }
     console.log(coal);
 }
