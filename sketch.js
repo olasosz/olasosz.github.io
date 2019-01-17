@@ -26,6 +26,7 @@ var channelName = "train";
 function setup() 
 {
   button = createButton('coal');
+  button.size(100,100);
   button.position(65, 65);
   button.mousePressed(moreCoal);
 
@@ -65,8 +66,7 @@ if (r >= 0) {
 ///uses built in deviceShaken function in p5
 function deviceShaken() 
 {
-if (r <= 0) {
-	r= r+20;
+	r = r+20;
 
 }
 
@@ -91,5 +91,5 @@ if (coal>=0) {
 
 function moreCoal() {
 	coal+=20;
-	 r = r+20;
+	//r = r+20;
 }
