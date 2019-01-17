@@ -47,8 +47,8 @@ function setup()
     background(r, g, b);
     noStroke();
     fill(0);  
-    textSize(90);
-    text("!SHOVEL!", width/2, height/2);
+    //textSize(90);
+    //text("!SHOVEL!", width/2, height/2);
 
 
 }
@@ -70,7 +70,7 @@ function deviceShaken()
 
 }
 
-if (coal>=0) {
+if (coal!= 0) {
 	speed += 4;
 	coal--;
 }
@@ -91,5 +91,5 @@ if (coal>=0) {
 
 function moreCoal() {
 	coal+=20;
-	//r = r+20;
+	r = r+20;
 }
