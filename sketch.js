@@ -26,7 +26,6 @@ var channelName = "train";
 function setup() 
 {
   button = createButton('coal');
-  button.size(100,100);
   button.position(65, 65);
   button.mousePressed(moreCoal);
 
@@ -47,38 +46,31 @@ function setup()
     background(r, g, b);
     noStroke();
     fill(0);  
-    //textSize(90);
+    textSize(90);
     text("!SHOVEL!", width/2, height/2);
 
 
 }
 
 function draw() {
-/*
 background(r, g, b);
 speed--;
 if (r >= 0) {
 	r --;
 }
     console.log(coal);
-
-
-  */
-  
-background(255,0,0);
-  fill(0);
-  text(r,width/2,height/2);  
 }
 
 
 ///uses built in deviceShaken function in p5
 function deviceShaken() 
 {
-	r = r+20;
+if (r <= 0) {
+	r= r+20;
 
 }
 
-if (coal!= 0) {
+if (coal>=0) {
 	speed += 4;
 	coal--;
 }
@@ -99,5 +91,5 @@ if (coal!= 0) {
 
 function moreCoal() {
 	coal+=20;
-	r = r+20;
+	 r = r+20;
 }
