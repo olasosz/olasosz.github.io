@@ -54,12 +54,20 @@ function setup()
 }
 
 function draw() {
+/*
 background(r, g, b);
 speed--;
 if (r >= 0) {
 	r --;
 }
     console.log(coal);
+
+
+  */
+  
+
+  fill(0);
+  text(r,width/2,height/2);  
 }
 
 
