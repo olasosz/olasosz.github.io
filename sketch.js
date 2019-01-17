@@ -65,7 +65,7 @@ if (r >= 0) {
 
   */
   
-
+background(255,0,0);
   fill(0);
   text(r,width/2,height/2);  
 }
