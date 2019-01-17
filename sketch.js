@@ -47,9 +47,9 @@ function setup()
 
 function draw() {
 background(r, g, b);
-speed--;
+speed-= 2;
 if (r >= 0) {
-  r --;
+  r -= 5;
 }
     console.log(coal);
 }
