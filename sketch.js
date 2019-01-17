@@ -65,7 +65,7 @@ if (r >= 0) {
 ///uses built in deviceShaken function in p5
 function deviceShaken() 
 
-	r += 20;
+	r= r+20;
 
 if (coal>=0) {
 	speed += 4;
@@ -84,7 +84,6 @@ if (coal>=0) {
       }
     });
 
-}
 
 function moreCoal() {
 	coal+=20;
