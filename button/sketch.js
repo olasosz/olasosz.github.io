@@ -20,8 +20,6 @@ function setup()
   button.position(65, 65);
   button.mousePressed(moreCoal);
 
-  whistle = loadImage("img.png"); //makes image
-
   getAudioContext().resume();
   createCanvas(windowWidth, windowHeight);
   background(255);
@@ -37,9 +35,6 @@ function setup()
 
     noStroke();
     fill(0);  
-    //textSize(90);
-    //text("!MORE COAL!", width/2, height/2);
-
 
 }
 
@@ -47,14 +42,10 @@ function draw() {
   background(240);
   console.log(coal);
 }
-
 //function to add coal, for easier access
 function moreCoal() {
   coal += 20;
-}
-
-//console.log(slideNumber);
-
+  
   //publish the number to everyone.
   dataServer.publish(
     {
@@ -64,3 +55,4 @@ function moreCoal() {
         trainC: coal;       
       }
     });
+}

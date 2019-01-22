@@ -59,7 +59,6 @@ if (coal > 0) {
 }else if(coal <= 0) {
   coal = 0;
 }
-}
 
 //console.log(slideNumber);
 
@@ -73,3 +72,4 @@ if (coal > 0) {
         trainS: speed;       
       }
     });
+}
