@@ -22,7 +22,7 @@ function setup()
 
   getAudioContext().resume();
   createCanvas(windowWidth, windowHeight);
-  background(255);
+  background(0);
   
    // initialize pubnub
    dataServer = new PubNub(
@@ -54,7 +54,6 @@ function setup()
 function mouseClicked(){
   var clickdistance = dist(whistle.x, whistle.y, mouseX, mouseY);
   if(clickdistance < whistle.r){
-    fill(100);
     moreCoal();
   }
 }
