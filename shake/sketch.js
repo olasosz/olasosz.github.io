@@ -33,16 +33,16 @@ function setup()
   
     background(r, g, b);
     noStroke();
-    fill(250);  
-    textSize(90);
-    text(coal, width/2, height/2);
+    fill(0);  
+    //textSize(90);
+    //text("!SHOVEL!", width/2, height/2);
 
 
 }
 
 function draw() {
 background(r, g, b);
-speed-= 2;
+speed -= 2;
 if (r >= 0) {
   r = r-10;
 }
@@ -53,14 +53,15 @@ if (r >= 0) {
 ///uses built in deviceShaken function in p5
 function deviceShaken() 
 {
-	if (coal <= 0) {}
- else{  
   r = r+20;
   speed += 4;
   coal--;
 }
-}
 
+if (coal <= 0) {
+  text("RESTOCK!", width/2,height/2);
+  coal = 0;
+}
 
 //console.log(slideNumber);
 
