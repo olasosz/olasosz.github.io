@@ -53,6 +53,7 @@ if (r >= 0) {
 ///uses built in deviceShaken function in p5
 function deviceShaken() 
 {
+if (coal > 0) {
   r = r+20;
   speed += 4;
   coal--;
@@ -61,6 +62,7 @@ function deviceShaken()
 if (coal <= 0) {
   text("RESTOCK!", width/2,height/2);
   coal = 0;
+}
 }
 
 //console.log(slideNumber);
