@@ -1,4 +1,4 @@
-
+//makes speed increase as device is shaken, consumes coal
 
 var dataServer;
 var pubKey = 'pub-c-8efd8f87-9fe2-45a5-81f6-7b60513f5ddc';
@@ -8,7 +8,7 @@ var subKey = 'sub-c-43574d8c-135b-11e9-abd1-2a488504b737';
 var r = 0;
 var g = 0;
 var b = 0;
-var speed=0;
+var speed = 0;
 var coal = 100;
 
 
@@ -17,11 +17,6 @@ var channelName = "train";
 
 function setup() 
 {
-  button = createButton('coal');
-  button.size(100,100);
-  button.position(65, 65);
-  button.mousePressed(moreCoal);
-
   getAudioContext().resume();
   createCanvas(windowWidth, windowHeight);
   background(255);
@@ -51,7 +46,7 @@ speed-= 2;
 if (r >= 0) {
   r = r-20;
 }
-    console.log(coal);
+    //console.log(coal);
 }
 
 
@@ -78,9 +73,3 @@ if (coal!= 0) {
         slide: slideNumber       
       }
     });
-
-
-function moreCoal() {
-  coal+=20;
-  r = r+20;
-}
