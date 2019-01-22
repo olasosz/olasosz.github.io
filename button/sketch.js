@@ -37,7 +37,8 @@ function setup()
    fill(200);  
 
    whistle = {
-    i: loadImage("img.png"),
+    n: loadImage("notPress.png"),
+    i: loadImage("isPress.png"),
     x: width/2,
     y: height/2,
     l: 500,
@@ -50,7 +51,7 @@ function setup()
   background(0);
   console.log(coal);
 
-  image(whistle.i, whistle.x, whistle.y, whistle.l, whistle.w);
+  image(whistle.n, whistle.x, whistle.y, whistle.l, whistle.w);
 //  rect(whistle.x, whistle.y, whistle.l, whistle.w);
 
 }
@@ -65,6 +66,7 @@ function mouseClicked(){
 //function to add coal, for easier access
 function moreCoal() {
   coal += 20;
+  image(whistle.i, whistle.x, whistle.y, whistle.l, whistle.w);
 
   //publish the number to everyone.
   dataServer.publish(
