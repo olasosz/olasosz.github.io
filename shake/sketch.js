@@ -9,7 +9,7 @@ var r = 0;
 var g = 0;
 var b = 0;
 var speed = 0;
-var coal = 20;
+var coal = 50;
 
 
 //name used to sort your messages. used like a radio station. can be called anything
@@ -17,10 +17,6 @@ var channelName = "train";
 
 function setup() 
 {
-  button = createButton('coal');
-  button.size(100,100);
-  button.position(65, 65);
-  button.mousePressed(moreCoal);
 
   getAudioContext().resume();
   createCanvas(windowWidth, windowHeight);
@@ -42,17 +38,18 @@ function setup()
 
 }
 
+//gradually decrease values
 function draw() {
 background(r, g, b);
 speed -= 2;
 if (r >= 0) {
-  r = r-10;
+  r = r-5;
 }
     //console.log(coal);
 }
 
 
-///uses built in deviceShaken function in p5
+///uses built in deviceShaken function in p5 - when shaken, increase red value and speed, but only if there is coal
 function deviceShaken() 
 {
 if (coal > 0) {
@@ -75,7 +72,3 @@ if (coal > 0) {
         slide: slideNumber       
       }
     });
-
-function moreCoal() {
-  coal += 20;
-}
