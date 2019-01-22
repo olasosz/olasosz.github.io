@@ -58,8 +58,8 @@ function deviceShaken()
   	channel: channelName,
   	message: 
   	{
-  		trainC: coal;
-  		trainS: speed;       
+  		trainC: coal
+  		trainS: speed       
   	}
   });
 }
