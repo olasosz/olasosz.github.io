@@ -1,8 +1,8 @@
 //creates a button that generates more coal
 
 var dataServer;
-var pubKey = 'pub-c-8efd8f87-9fe2-45a5-81f6-7b60513f5ddc';
-var subKey = 'sub-c-43574d8c-135b-11e9-abd1-2a488504b737';
+var pubKey = 'pub-c-63d8f906-e9db-43e0-849f-d87e9808713e';
+var subKey = 'sub-c-de8a798e-1e67-11e9-9c4f-3252f3293505';
 
 //input variables
 var coal = 50;
