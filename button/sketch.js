@@ -38,7 +38,7 @@ function setup()
    whistle = {
     x: width/2,
     y: height/2,
-    r: 15
+    r: 50
   };
 
  }
