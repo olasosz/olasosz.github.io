@@ -5,7 +5,7 @@ var pubKey = 'pub-c-8efd8f87-9fe2-45a5-81f6-7b60513f5ddc';
 var subKey = 'sub-c-43574d8c-135b-11e9-abd1-2a488504b737';
 
 //input variables
-var coal = 100;
+var trainC;
 var hit; //var for collision detection later
 
 
@@ -45,7 +45,7 @@ function draw() {
 //function to add coal, for easier access
 function moreCoal() {
   coal += 20;
-  
+
   //publish the number to everyone.
   dataServer.publish(
     {
@@ -55,4 +55,9 @@ function moreCoal() {
         trainC: coal;       
       }
     });
+}
+
+function readIncoming(inMessage) //when new data comes in it triggers this function, 
+{
+  var coal = trainC;
 }

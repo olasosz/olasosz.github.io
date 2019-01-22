@@ -63,3 +63,8 @@ function deviceShaken()
   	}
   });
 }
+
+function readIncoming(inMessage) //when new data comes in it triggers this function, 
+{
+	var coal = trainC;
+}
