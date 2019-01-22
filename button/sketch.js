@@ -32,11 +32,13 @@ function setup()
     ssl: true  //enables a secure connection. This option has to be used if using the OCAD webspace
   });
 
+   background(0);
    noStroke();
    imageMode(CENTER);
    fill(200);  
 
-   whistle = {
+//button parameters
+   whistle = { 
     n: loadImage("notPress.png"),
     i: loadImage("isPress.png"),
     x: width/2,
@@ -48,25 +50,29 @@ function setup()
  }
 
  function draw() {
-  background(0);
   console.log(coal);
 
-  image(whistle.n, whistle.x, whistle.y, whistle.l, whistle.w);
+  image(whistle.n, whistle.x, whistle.y, whistle.l, whistle.w); //generates the "button" as a png
 //  rect(whistle.x, whistle.y, whistle.l, whistle.w);
 
 }
 
-function mouseClicked(){
+function mouseClicked(){ //checks if the "button" is pressed
   var clickdistance = dist(whistle.x, whistle.y, mouseX, mouseY);
   if(clickdistance < whistle.l || clickdistance < whistle.w){
     moreCoal();
   }
 }
 
-//function to add coal, for easier access
+function reset() { //resets background
+  background(0);
+}
+
+//function to add coal, changes image as well
 function moreCoal() {
   coal += 20;
   image(whistle.i, whistle.x, whistle.y, whistle.l, whistle.w);
+  setTimeout(reset(),1000); //resets the background after __ seconds
 
   //publish the number to everyone.
   dataServer.publish(
