@@ -38,7 +38,8 @@ function setup()
    whistle = {
     x: width/2,
     y: height/2,
-    s: 50
+    l: 50,
+    w: 50
   };
 
  }
@@ -47,7 +48,7 @@ function setup()
   background(0);
   console.log(coal);
 
-  rect(whistle.x, whistle.y, whistle.s);
+  rect(whistle.x, whistle.y, whistle.l, whistle.w);
 
 }
 
