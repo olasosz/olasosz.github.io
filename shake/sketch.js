@@ -57,7 +57,7 @@ function deviceShaken()
 
 }
 
-if (coal!= 0) {
+if (coal >= 0) {
     r = r+20;
     speed += 4;
   coal--;
