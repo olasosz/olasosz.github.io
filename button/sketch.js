@@ -51,7 +51,6 @@ function setup()
 
  function draw() {
   console.log(coal);
-      setInterval(reset(),3000); //resets the background after 3 seconds
 
   image(whistle.n, whistle.x, whistle.y, whistle.l, whistle.w); //generates the "button" as a png
 //  rect(whistle.x, whistle.y, whistle.l, whistle.w);
@@ -64,7 +63,7 @@ function mouseClicked(){ //checks if the "button" is pressed
     image(whistle.i, whistle.x, whistle.y, whistle.l, whistle.w);
     moreCoal();
 
-
+    setTimeout(reset(),3000); //resets the background after 3 seconds
   }
 }
 
