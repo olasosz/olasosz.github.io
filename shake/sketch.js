@@ -34,7 +34,9 @@ function setup()
 //gradually decrease values
 function draw() {
 	background(r, g, b);
+	if (speed > 0) {
 	speed -= 2;
+}
 	if (r >= 0) {
 		r = r-5;
 	}
