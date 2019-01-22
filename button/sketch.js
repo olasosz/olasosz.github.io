@@ -54,7 +54,7 @@ function setup()
 
 function mouseClicked(){
   var clickdistance = dist(whistle.x, whistle.y, mouseX, mouseY);
-  if(clickdistance < whistle.s){
+  if(clickdistance < whistle.l || clickdistance < whistle.w){
     moreCoal();
   }
 }
