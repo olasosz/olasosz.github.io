@@ -29,6 +29,11 @@ function setup()
     subscribe_key : subKey,  
     ssl: true  //enables a secure connection. This option has to be used if using the OCAD webspace
 });
+
+   setInterval(slowDown, 300);
+
+
+
 }
 
 //gradually decrease values
@@ -64,6 +69,23 @@ function deviceShaken()
   		trainS: speed       
   	}
   });
+}
+
+
+function slowDown()
+{
+	speed-=2;
+  //publish the numbers to everyone.
+  dataServer.publish(
+  {
+  	channel: channelName,
+  	message: 
+  	{
+  		trainC: coal,
+  		trainS: speed       
+  	}
+  });
+
 }
 
 function readIncoming(inMessage) //when new data comes in it triggers this function, 
