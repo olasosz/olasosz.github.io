@@ -6,7 +6,7 @@ var subKey = 'sub-c-43574d8c-135b-11e9-abd1-2a488504b737';
 
 //input variables
 var trainC;
-var hit; //var for collision detection later
+var whistle;
 
 
 //name used to sort your messages. used like a radio station. can be called anything
@@ -24,37 +24,53 @@ function setup()
   createCanvas(windowWidth, windowHeight);
   background(255);
   
- 
    // initialize pubnub
-  dataServer = new PubNub(
-  {
+   dataServer = new PubNub(
+   {
     publish_key   : pubKey,  //get these from the pubnub account online
     subscribe_key : subKey,  
     ssl: true  //enables a secure connection. This option has to be used if using the OCAD webspace
   });
 
-    noStroke();
-    fill(0);  
+   noStroke();
+   fill(0);  
 
-}
+   whistle = {
+    x: width/2,
+    y: height/2,
+    r: 15
+  };
 
-function draw() {
+ }
+
+ function draw() {
   background(240);
   console.log(coal);
+
+  ellipse(whistle.x, whistle.y, whistle.r * 2);
+
 }
+
+function mouseClicked(){
+  var clickdistance = dist(whistle.x, whistle.y, mouseX, mouseY);
+  if(clickdistance < whistle.r){
+    fill(100);
+  }
+}
+
 //function to add coal, for easier access
 function moreCoal() {
   coal += 20;
 
   //publish the number to everyone.
   dataServer.publish(
+  {
+    channel: channelName,
+    message: 
     {
-      channel: channelName,
-      message: 
-      {
-        trainC: coal;       
-      }
-    });
+      trainC: coal;       
+    }
+  });
 }
 
 function readIncoming(inMessage) //when new data comes in it triggers this function, 
