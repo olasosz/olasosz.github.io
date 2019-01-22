@@ -1,4 +1,4 @@
-
+//cause speed to increase as device is shaken, consuming coal
 
 var dataServer;
 var pubKey = 'pub-c-8efd8f87-9fe2-45a5-81f6-7b60513f5ddc';
@@ -8,7 +8,7 @@ var subKey = 'sub-c-43574d8c-135b-11e9-abd1-2a488504b737';
 var r = 0;
 var g = 0;
 var b = 0;
-var speed=0;
+var speed = 0;
 var coal = 100;
 
 
@@ -17,10 +17,6 @@ var channelName = "train";
 
 function setup() 
 {
-  button = createButton('coal');
-  button.size(100,100);
-  button.position(65, 65);
-  button.mousePressed(moreCoal);
 
   getAudioContext().resume();
   createCanvas(windowWidth, windowHeight);
@@ -47,27 +43,26 @@ function setup()
 
 function draw() {
 background(r, g, b);
+//decreases speed and red value over time
 speed-= 2;
-if (r >= 0) {
-  r = r-20;
+if (r >= 0) { //stops red value from becoming negative
+  r = r-10;
 }
-    console.log(coal);
 }
 
 
 ///uses built in deviceShaken function in p5
-function deviceShaken() 
-{
+function deviceShaken() {
+  //r = r+20;
+
+//if the device shakes and there is coal, red value and speed increase, and coal decreases
+if (coal!= 0) { 
   r = r+20;
-
-}
-
-if (coal!= 0) {
   speed += 4;
   coal--;
+	}
 }
 
-//console.log(slideNumber);
 
   //publish the number to everyone.
   dataServer.publish(
@@ -75,12 +70,7 @@ if (coal!= 0) {
       channel: channelName,
       message: 
       {
-        slide: slideNumber       
+        trainS: speed;
+        trainC: coal;       
       }
     });
-
-
-function moreCoal() {
-  coal+=20;
-  r = r+20;
-}
