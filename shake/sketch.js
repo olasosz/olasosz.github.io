@@ -90,5 +90,5 @@ function slowDown()
 
 function readIncoming(inMessage) //when new data comes in it triggers this function, 
 {
-	var coal = trainC;
+	coal = inMessage.message.trainC;
 }
