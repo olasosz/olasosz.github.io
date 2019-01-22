@@ -53,12 +53,13 @@ if (r >= 0) {
 ///uses built in deviceShaken function in p5
 function deviceShaken() 
 {
-	if (coal > 0) {
+	if (coal <= 0) {}
+ else{  
   r = r+20;
   speed += 4;
   coal--;
-
-} else{}
+}
+}
 
 
 //console.log(slideNumber);
