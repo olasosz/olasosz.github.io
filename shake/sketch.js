@@ -1,8 +1,8 @@
 //makes speed increase as device is shaken, consumes coal
 
 var dataServer;
-var pubKey = 'pub-c-63d8f906-e9db-43e0-849f-d87e9808713e';
-var subKey = 'sub-c-de8a798e-1e67-11e9-9c4f-3252f3293505';
+var pubKey = 'pub-c-959add75-e9d1-4aa4-bfbd-62a5cb8d1ca3';
+var subKey = 'sub-c-fd6890b4-1e6e-11e9-a469-92940241a6b5';
 
 //input variables
 var r = 0;
