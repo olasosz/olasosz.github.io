@@ -38,8 +38,8 @@ function setup()
 
    whistle = {
     i: loadImage("img.png"),
-    x: width/2 - 500,
-    y: height/2 - 500,
+    x: width/2,
+    y: height/2,
     l: 500,
     w: 500
   };
