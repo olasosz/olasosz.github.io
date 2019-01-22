@@ -63,7 +63,7 @@ function mouseClicked(){ //checks if the "button" is pressed
     image(whistle.i, whistle.x, whistle.y, whistle.l, whistle.w);
     moreCoal();
 
-    setTimeout(reset,3000); //resets the background after 3 seconds
+    setTimeout(reset,1500); //resets the background after 3 seconds
   }
 }
 
