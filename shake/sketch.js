@@ -44,7 +44,7 @@ function draw() {
 background(r, g, b);
 speed-= 2;
 if (r >= 0) {
-  r = r-20;
+  r = r-10;
 }
     //console.log(coal);
 }
