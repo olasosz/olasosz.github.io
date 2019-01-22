@@ -33,6 +33,7 @@ function setup()
   });
 
    noStroke();
+   rectMode(CENTER);
    fill(200);  
 
    whistle = {
