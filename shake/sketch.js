@@ -17,6 +17,11 @@ var channelName = "train";
 
 function setup() 
 {
+	  button = createButton('coal');
+  button.size(100,100);
+  button.position(65, 65);
+  button.mousePressed(moreCoal);
+
   getAudioContext().resume();
   createCanvas(windowWidth, windowHeight);
   background(255);
@@ -73,3 +78,7 @@ if (coal > 0) {
         slide: slideNumber       
       }
     });
+
+function moreCoal() {
+  coal += 20;
+}
