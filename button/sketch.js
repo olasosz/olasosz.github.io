@@ -61,6 +61,7 @@ function mouseClicked(){ //checks if the "button" is pressed
   var clickdistance = dist(whistle.x, whistle.y, mouseX, mouseY);
   if(clickdistance < whistle.l || clickdistance < whistle.w){
     moreCoal();
+    setTimeout(reset(),3000); //resets the background after __ seconds
   }
 }
 
@@ -72,7 +73,6 @@ function reset() { //resets background
 function moreCoal() {
   coal += 20;
   image(whistle.i, whistle.x, whistle.y, whistle.l, whistle.w);
-  setTimeout(reset(),3000); //resets the background after __ seconds
 
   //publish the number to everyone.
   dataServer.publish(
