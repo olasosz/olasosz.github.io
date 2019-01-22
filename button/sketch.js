@@ -60,8 +60,10 @@ function setup()
 function mouseClicked(){ //checks if the "button" is pressed
   var clickdistance = dist(whistle.x, whistle.y, mouseX, mouseY);
   if(clickdistance < whistle.l || clickdistance < whistle.w){
+    image(whistle.i, whistle.x, whistle.y, whistle.l, whistle.w);
     moreCoal();
-    setTimeout(reset(),3000); //resets the background after __ seconds
+
+    setTimeout(reset(),5000); //resets the background after __ seconds
   }
 }
 
@@ -71,8 +73,8 @@ function reset() { //resets background
 
 //function to add coal, changes image as well
 function moreCoal() {
-  coal += 20;
-  image(whistle.i, whistle.x, whistle.y, whistle.l, whistle.w);
+  coal += 10;
+
 
   //publish the number to everyone.
   dataServer.publish(
