@@ -36,7 +36,7 @@ function setup()
    fill(200);  
 
    whistle = {
-    i: loadImage("img.png");
+    i: loadImage("img.png"),
     x: width/2,
     y: height/2,
     l: 50,
