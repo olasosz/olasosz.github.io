@@ -48,7 +48,7 @@ function setup()
  }
 
  function draw() {
-  background(0);
+  //background(0);
   console.log(coal);
 
   image(whistle.n, whistle.x, whistle.y, whistle.l, whistle.w);
