@@ -15,10 +15,10 @@ var channelName = "train";
 function setup() 
 {
   //makes button for coal, in case other version cant be implimented
-  button = createButton('coal');
-  button.size(100,100);
-  button.position(65, 65);
-  button.mousePressed(moreCoal);
+  // button = createButton('coal');
+  // button.size(500,500);
+  // button.position(width/2,height/2);
+  // button.mousePressed(moreCoal);
 
   getAudioContext().resume();
   createCanvas(windowWidth, windowHeight);
@@ -36,6 +36,7 @@ function setup()
    fill(200);  
 
    whistle = {
+    i: loadImage("img.png");
     x: width/2,
     y: height/2,
     l: 50,
@@ -48,7 +49,8 @@ function setup()
   background(0);
   console.log(coal);
 
-  rect(whistle.x, whistle.y, whistle.l, whistle.w);
+  image(whistle.i, whistle.x, whistle.y, whistle.l, whistle.w);
+//  rect(whistle.x, whistle.y, whistle.l, whistle.w);
 
 }
 
