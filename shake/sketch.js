@@ -17,7 +17,7 @@ var channelName = "train";
 
 function setup() 
 {
-	  button = createButton('coal');
+  button = createButton('coal');
   button.size(100,100);
   button.position(65, 65);
   button.mousePressed(moreCoal);
@@ -60,9 +60,6 @@ if (coal > 0) {
   speed += 4;
   coal--;
 }else if(coal <= 0) {
- fill(255);
- textSize(500);
-  text("RESTOCK!", width/2,height/2);
   coal = 0;
 }
 }
