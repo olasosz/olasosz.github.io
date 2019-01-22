@@ -69,6 +69,7 @@ if (coal > 0) {
       channel: channelName,
       message: 
       {
-        slide: slideNumber       
+        trainC: coal;
+        trainS: speed;       
       }
     });
