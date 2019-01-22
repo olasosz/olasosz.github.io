@@ -5,7 +5,7 @@ var pubKey = 'pub-c-8efd8f87-9fe2-45a5-81f6-7b60513f5ddc';
 var subKey = 'sub-c-43574d8c-135b-11e9-abd1-2a488504b737';
 
 //input variables
-var coal = 20;
+var coal = 50;
 var whistle;
 
 
@@ -38,7 +38,7 @@ function setup()
    whistle = {
     x: width/2,
     y: height/2,
-    r: 50
+    s: 50
   };
 
  }
@@ -47,13 +47,13 @@ function setup()
   background(0);
   console.log(coal);
 
-  ellipse(whistle.x, whistle.y, whistle.r * 2);
+  rect(whistle.x, whistle.y, whistle.s);
 
 }
 
 function mouseClicked(){
   var clickdistance = dist(whistle.x, whistle.y, mouseX, mouseY);
-  if(clickdistance < whistle.r){
+  if(clickdistance < whistle.s){
     moreCoal();
   }
 }
