@@ -9,7 +9,7 @@ var r = 0;
 var g = 0;
 var b = 0;
 var speed = 0;
-var coal = 50;
+var coal = 500;
 
 //name used to sort your messages. used like a radio station. can be called anything
 var channelName = "train";
@@ -25,7 +25,7 @@ function setup()
    // initialize pubnub
    dataServer = new PubNub(
    {
-    publish_key   : pubKey,  //get these from the pubnub account online
+    publish_key : pubKey,  //get these from the pubnub account online
     subscribe_key : subKey,  
     ssl: true  //enables a secure connection. This option has to be used if using the OCAD webspace
 });
