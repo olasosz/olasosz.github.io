@@ -33,9 +33,6 @@ function setup()
   
     background(r, g, b);
     noStroke();
-    fill(200);  
-    textSize(90);
-    //text("!SHOVEL!", width/2, height/2);
 
 
 }
@@ -57,9 +54,9 @@ if (coal > 0) {
   r = r+20;
   speed += 4;
   coal--;
-}
-
-if (coal <= 0) {
+}else if(coal <= 0) {
+ fill(255);
+ textSize(500);
   text("RESTOCK!", width/2,height/2);
   coal = 0;
 }
