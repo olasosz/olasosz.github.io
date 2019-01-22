@@ -1,4 +1,4 @@
-
+//creates a button that generates more coal
 
 var dataServer;
 var pubKey = 'pub-c-8efd8f87-9fe2-45a5-81f6-7b60513f5ddc';
@@ -6,6 +6,7 @@ var subKey = 'sub-c-43574d8c-135b-11e9-abd1-2a488504b737';
 
 //input variables
 var coal = 100;
+var hit; //var for collision detection later
 
 
 //name used to sort your messages. used like a radio station. can be called anything
@@ -13,6 +14,7 @@ var channelName = "train";
 
 function setup() 
 {
+  //makes button for coal, in case other version cant be implimented
   button = createButton('coal');
   button.size(100,100);
   button.position(65, 65);
@@ -40,11 +42,14 @@ function setup()
 }
 
 function draw() {
-background(0);
-}
-    console.log(coal);
+  background(0);
+  console.log(coal);
 }
 
+//function to add coal, for easier access
+function moreCoal() {
+  coal += 20;
+}
 
 //console.log(slideNumber);
 
@@ -54,11 +59,6 @@ background(0);
       channel: channelName,
       message: 
       {
-        slide: slideNumber       
+        trainC: coal;       
       }
     });
-
-
-function moreCoal() {
-  coal+=20;
-}
