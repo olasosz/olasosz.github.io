@@ -72,7 +72,7 @@ function reset() { //resets background
 function moreCoal() {
   coal += 20;
   image(whistle.i, whistle.x, whistle.y, whistle.l, whistle.w);
-  setTimeout(reset(),1000); //resets the background after __ seconds
+  setTimeout(reset(),3000); //resets the background after __ seconds
 
   //publish the number to everyone.
   dataServer.publish(
