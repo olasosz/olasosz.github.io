@@ -39,8 +39,8 @@ function setup()
     i: loadImage("img.png"),
     x: width/2,
     y: height/2,
-    l: 50,
-    w: 50
+    l: 500,
+    w: 500
   };
 
  }
