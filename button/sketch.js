@@ -33,7 +33,7 @@ function setup()
   });
 
    noStroke();
-   fill(0);  
+   fill(200);  
 
    whistle = {
     x: width/2,
@@ -44,7 +44,7 @@ function setup()
  }
 
  function draw() {
-  background(240);
+  background(0);
   console.log(coal);
 
   ellipse(whistle.x, whistle.y, whistle.r * 2);
@@ -55,6 +55,7 @@ function mouseClicked(){
   var clickdistance = dist(whistle.x, whistle.y, mouseX, mouseY);
   if(clickdistance < whistle.r){
     fill(100);
+    moreCoal();
   }
 }
 
