@@ -71,7 +71,7 @@ function reset() { //resets background
   background(0);
 }
 
-//function to add coal, changes image as well
+//function to add coal
 function moreCoal() {
   coal += 10;
 
