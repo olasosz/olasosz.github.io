@@ -50,6 +50,7 @@ function setup()
  }
 
  function draw() {
+  readIncoming();
   console.log(coal);
 
   image(whistle.n, whistle.x, whistle.y, whistle.l, whistle.w); //generates the "button" as a png
