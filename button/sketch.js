@@ -32,6 +32,9 @@ function setup()
     ssl: true  //enables a secure connection. This option has to be used if using the OCAD webspace
   });
 
+  dataServer.addListener({ message: readIncoming });
+  dataServer.subscribe({channels: [channelName]});
+
    background(0);
    noStroke();
    imageMode(CENTER);
