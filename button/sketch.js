@@ -50,9 +50,10 @@ function setup()
   //console.log(coal);
 
   image(whistle.n, whistle.x, whistle.y, whistle.l, whistle.w); //generates the "button" as a png
+  rectMode(CENTER);
   fill(255);
   textSize(100);
-  text('Coal:'+ coal, width/2, 50);
+  text('COAL:'+ coal, width/2, 50);
 
 }
 
@@ -62,7 +63,7 @@ function mouseClicked(){ //checks if the "button" is pressed
     image(whistle.i, whistle.x, whistle.y, whistle.l, whistle.w);
     moreCoal();
 
-    setTimeout(reset,1500); //resets the background after 3 seconds
+    setTimeout(reset,1500); //resets the background after 1.5 seconds
   }
 }
 
