@@ -53,7 +53,7 @@ function setup()
   image(whistle.n, whistle.x, whistle.y, whistle.l, whistle.w); //generates the "button" as a png
   fill(255);
   textSize(70);
-  text('Coal:'+ coal, width/3, 70);
+  text('Coal:'+ coal, width/3, 80);
 
 }
 
