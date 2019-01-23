@@ -40,13 +40,13 @@ function setup()
 //gradually decrease values
 function draw() {
 	background(r, g, b);
-  fill(255);
-  textSize(70);
-  text('Coal:'+ coal, width/3, height/2);
 
 	if (r >= 0) {
 		r = r-5;
 	}
+  fill(255);
+  textSize(70);
+  text('Coal:'+ coal, width/3, 80);
     //console.log(coal);
 }
 
@@ -61,6 +61,9 @@ function deviceShaken()
 	}
 	}else if(coal <= 0) {
 		coal = 0;
+  fill(255);
+  textSize(70);
+  text('No coal!', width/3, 80);
 	}
 
   //publish the numbers to everyone.
