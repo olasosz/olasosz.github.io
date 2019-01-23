@@ -40,7 +40,9 @@ function setup()
 //gradually decrease values
 function draw() {
 	background(r, g, b);
-
+  fill(255);
+  textSize(70);
+  text('Coal:'+ coal, width/3, height/2);
 
 	if (r >= 0) {
 		r = r-5;
