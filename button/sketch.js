@@ -48,12 +48,12 @@ function setup()
 
  function draw() {
   //console.log(coal);
+  background(0);
 
   image(whistle.n, whistle.x, whistle.y, whistle.l, whistle.w); //generates the "button" as a png
-  rectMode(CENTER);
   fill(255);
   textSize(100);
-  text('COAL:'+ coal, width/2, 50);
+  text('Coal:'+ coal, width/2, 50);
 
 }
 
