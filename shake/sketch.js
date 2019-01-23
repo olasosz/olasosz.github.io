@@ -40,11 +40,7 @@ function setup()
 function draw() {
 	background(r, g, b);
 
-	if (speed < 0) {
-	speed = 2;
-	} else if (speed > 0) {
-		speed -= 2;
-	}
+
 	if (r >= 0) {
 		r = r-5;
 	}
@@ -54,7 +50,7 @@ function draw() {
 ///uses built in deviceShaken function in p5 - when shaken, increase red value and speed, but only if there is coal
 function deviceShaken() 
 {
-	if (coal > 0) {
+	if (coal > 0 && speed < 15) {
 		r = r+20;
 		speed += 4;
 		coal--;
@@ -77,7 +73,11 @@ function deviceShaken()
 
 function slowDown()
 {
-	speed-=2;
+	if (speed < 0) {
+		speed = 2;
+	} else if (speed > 0) {
+		speed -= 2;
+	}
   //publish the numbers to everyone.
   dataServer.publish(
   {
