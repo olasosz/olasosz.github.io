@@ -14,12 +14,6 @@ var channelName = "train";
 
 function setup() 
 {
-  //makes button for coal, in case other version cant be implimented
-  // button = createButton('coal');
-  // button.size(500,500);
-  // button.position(width/2,height/2);
-  // button.mousePressed(moreCoal);
-
   getAudioContext().resume();
   createCanvas(windowWidth, windowHeight);
   background(0);
@@ -53,10 +47,9 @@ function setup()
  }
 
  function draw() {
-  console.log(coal);
+  //console.log(coal);
 
   image(whistle.n, whistle.x, whistle.y, whistle.l, whistle.w); //generates the "button" as a png
-//  rect(whistle.x, whistle.y, whistle.l, whistle.w);
 
 }
 
@@ -76,7 +69,7 @@ function reset() { //resets background
 
 //function to add coal
 function moreCoal() {
-  coal += 10;
+  coal += 5;
 
 
   //publish the number to everyone.
