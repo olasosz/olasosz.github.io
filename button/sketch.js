@@ -5,7 +5,7 @@ var pubKey = 'pub-c-959add75-e9d1-4aa4-bfbd-62a5cb8d1ca3';
 var subKey = 'sub-c-fd6890b4-1e6e-11e9-a469-92940241a6b5';
 
 //input variables
-var coal = 50;
+var coal = 20;
 var whistle;
 
 
