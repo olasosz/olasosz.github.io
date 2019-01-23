@@ -50,6 +50,8 @@ function setup()
   //console.log(coal);
 
   image(whistle.n, whistle.x, whistle.y, whistle.l, whistle.w); //generates the "button" as a png
+  fill(0);
+  text('Coal:'+ coal, width/2, height-height/6);
 
 }
 
