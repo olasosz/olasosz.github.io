@@ -48,7 +48,7 @@ function setup()
 
  function draw() {
   //console.log(coal);
-  background(0);
+  
 
   image(whistle.n, whistle.x, whistle.y, whistle.l, whistle.w); //generates the "button" as a png
   fill(255);
@@ -60,10 +60,11 @@ function setup()
 function mouseClicked(){ //checks if the "button" is pressed
   var clickdistance = dist(whistle.x, whistle.y, mouseX, mouseY);
   if(clickdistance < whistle.l || clickdistance < whistle.w){
+    background(0);
     image(whistle.i, whistle.x, whistle.y, whistle.l, whistle.w);
     moreCoal();
 
-    setTimeout(reset,1500); //resets the background after 1.5 seconds
+    setTimeout(reset,1000); //resets the background after 1.5 seconds
   }
 }
 
