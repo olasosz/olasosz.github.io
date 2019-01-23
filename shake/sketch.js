@@ -40,10 +40,10 @@ function setup()
 function draw() {
 	background(r, g, b);
 
-	if (speed > 0) {
-	speed -= 2;
-	} else if (speed < 0) {
-		speed = 0;
+	if (speed < 0) {
+	speed = 0;
+	} else if (speed > 0) {
+		speed -= 2;
 	}
 	if (r >= 0) {
 		r = r-5;
