@@ -42,7 +42,7 @@ function draw() {
 
 	if (speed > 0) {
 	speed -= 2;
-	} else if (speed <= 0) {
+	} else if (speed < 0) {
 		speed = 0;
 	}
 	if (r >= 0) {
