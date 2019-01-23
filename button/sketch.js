@@ -60,7 +60,7 @@ function setup()
 function mouseClicked(){ //checks if the "button" is pressed
   var clickdistance = dist(whistle.x, whistle.y, mouseX, mouseY);
   if(clickdistance < whistle.l || clickdistance < whistle.w){
-    background(0);
+
     image(whistle.i, whistle.x, whistle.y, whistle.l, whistle.w);
     moreCoal();
 
