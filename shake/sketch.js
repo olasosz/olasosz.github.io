@@ -50,9 +50,9 @@ function draw() {
 ///uses built in deviceShaken function in p5 - when shaken, increase red value and speed, but only if there is coal
 function deviceShaken() 
 {
-	if (coal > 0 && speed <= 11) {
+	if (coal > 0 && speed <= 12) {
 		r = r+20;
-		speed += 4;
+		speed += 2;
 		coal--;
 	}else if(coal <= 0) {
 		coal = 0;
