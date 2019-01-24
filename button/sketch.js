@@ -83,7 +83,8 @@ function moreCoal() {
     channel: channelName,
     message: 
     {
-      trainC: coal      
+      trainC: coal ,
+      train: 0    
     }
   });
 }
