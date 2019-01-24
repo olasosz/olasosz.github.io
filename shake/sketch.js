@@ -34,7 +34,7 @@ function setup()
   dataServer.addListener({ message: readIncoming });
   dataServer.subscribe({channels: [subChannel]});
 
-   setInterval(slowDown, 300);
+   setInterval(slowDown, 200);
 
 }
 
@@ -80,7 +80,7 @@ function slowDown()
 {
 	if (speed < 0) {
 		speed = 2;
-	} else if (speed < 20) {
+	} else if (speed < 200) {
 		speed -= 2;
 	}
   //publish the numbers to everyone.
