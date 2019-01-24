@@ -7,7 +7,7 @@ var subKey = 'sub-c-43574d8c-135b-11e9-abd1-2a488504b737';
 //input variables
 var coal = 20;
 var whistle;
-var station = true;
+//var station = false;
 
 //name used to sort your messages. used like a radio station. can be called anything
 var channelName = "train";
@@ -55,20 +55,17 @@ function setup()
   // textSize(70);
   // text('Coal:'+ coal, width/3, 80);
 
-console.log(station);
 }
 
 function mouseClicked(){ //checks if the "button" is pressed
   var clickdistance = dist(whistle.x, whistle.y, mouseX, mouseY);
   if(clickdistance < whistle.l || clickdistance < whistle.w){
-    if (station == true) {
 
     image(whistle.i, whistle.x, whistle.y, whistle.l, whistle.w);
     moreCoal();
 
     setTimeout(reset,1000); //resets the background after 1.5 seconds
   }
-}
 }
 
 function reset() { //resets background
@@ -94,5 +91,5 @@ function moreCoal() {
 function readIncoming(inMessage) //when new data comes in it triggers this function, 
 {
   coal = inMessage.message.trainC;
-  station = inMessage.message.atStation;
+  //station = inMessage.message.atStation;
 }
