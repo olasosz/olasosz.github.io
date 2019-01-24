@@ -54,6 +54,7 @@ function setup()
   // fill(255);
   // textSize(70);
   // text('Coal:'+ coal, width/3, 80);
+  console.log(station);
 
 }
 
