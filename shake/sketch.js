@@ -69,8 +69,8 @@ function deviceShaken()
   	channel: channelName,
   	message: 
   	{
-  		//trainC: coal,
-  		trainS: speed       
+  		trainC: coal,
+  		train: speed       
   	}
   });
 }
@@ -90,7 +90,7 @@ function slowDown()
   	message: 
   	{
   		trainC: coal,
-  		trainS: speed       
+  		train: speed       
   	}
   });
 
