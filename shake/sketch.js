@@ -9,7 +9,7 @@ var r = 0;
 var g = 0;
 var b = 0;
 var speed = 0;
-var coal = 20;
+var coal = 40;
 
 //name used to sort your messages. used like a radio station. can be called anything
 var channelName = "train";
