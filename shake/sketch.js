@@ -80,7 +80,7 @@ function slowDown()
 {
 	if (speed < 0) {
 		speed = 2;
-	} else if (speed > 0) {
+	} else if (speed < 20) {
 		speed -= 2;
 	}
   //publish the numbers to everyone.
