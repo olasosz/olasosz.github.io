@@ -10,7 +10,7 @@ var whistle;
 //var station = false;
 
 //name used to sort your messages. used like a radio station. can be called anything
-var channelName = "train";
+var channelName = "coal";
 
 function setup() 
 {

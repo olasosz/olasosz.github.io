@@ -13,7 +13,7 @@ var coal = 40;
 
 //name used to sort your messages. used like a radio station. can be called anything
 var channelName = "train";
-
+var subChannel = "coal";
 
 function setup() 
 {
@@ -32,7 +32,7 @@ function setup()
 });
 
   dataServer.addListener({ message: readIncoming });
-  dataServer.subscribe({channels: [channelName]});
+  dataServer.subscribe({channels: [subChannel]});
 
    setInterval(slowDown, 300);
 
