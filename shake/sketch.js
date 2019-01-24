@@ -14,6 +14,7 @@ var coal = 40;
 //name used to sort your messages. used like a radio station. can be called anything
 var channelName = "train";
 
+
 function setup() 
 {
 	getAudioContext().resume();
@@ -89,8 +90,8 @@ function slowDown()
   	channel: channelName,
   	message: 
   	{
-  		trainC: coal,
-  		train: speed       
+  		train: speed
+  		       
   	}
   });
 
