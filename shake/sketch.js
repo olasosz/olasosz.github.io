@@ -55,7 +55,7 @@ function draw() {
 function deviceShaken() 
 {
 	if (coal > 0) {
-		if (speed <= 12) {
+		if (speed < 14) {
 		r = r+20;
 		speed += 2;
 		coal--;
