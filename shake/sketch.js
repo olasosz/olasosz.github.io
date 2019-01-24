@@ -70,7 +70,6 @@ function deviceShaken()
   	channel: channelName,
   	message: 
   	{
-  		trainC: coal,
   		train: speed       
   	}
   });
