@@ -70,7 +70,7 @@ function deviceShaken()
   	channel: channelName,
   	message: 
   	{
-  		train: speed       
+  		train: speed    
   	}
   });
 }
