@@ -34,7 +34,7 @@ function setup()
   dataServer.addListener({ message: readIncoming });
   dataServer.subscribe({channels: [subChannel]});
 
- //  setInterval(slowDown, 300);
+   setInterval(slowDown, 300);
 
 }
 
@@ -55,9 +55,9 @@ function draw() {
 function deviceShaken() 
 {
 	if (coal > 0) {
-		if (speed < 14) {
+		if (speed < 16) {
 		r = r+20;
-		speed += 2;
+		speed += 4;
 		coal--;
 	}
 	}else if(coal <= 0) {
@@ -76,22 +76,22 @@ function deviceShaken()
 }
 
 
-// function slowDown()
-// {
-// 	if (speed < 0) {
-// 		speed = 2;
-// 	} else if (speed > 0) {
-// 		speed -= 2;
-// 	}
-//   //publish the numbers to everyone.
-//   dataServer.publish(
-//   {
-//   	channel: channelName,
-//   	message: 
-//   	{
-//   		train: speed     
-//   	}
-//   });
+function slowDown()
+{
+	if (speed < 0) {
+		speed = 2;
+	} else if (speed > 0) {
+		speed -= 2;
+	}
+  //publish the numbers to everyone.
+  dataServer.publish(
+  {
+  	channel: channelName,
+  	message: 
+  	{
+  		train: speed     
+  	}
+  });
 
 }
 
