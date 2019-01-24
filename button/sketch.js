@@ -74,7 +74,7 @@ function reset() { //resets background
 
 //function to add coal
 function moreCoal() {
-  coal += 40;
+  coal += 20;
 
 
   //publish the number to everyone.

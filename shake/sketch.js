@@ -89,8 +89,7 @@ function slowDown()
   	channel: channelName,
   	message: 
   	{
-  		train: speed
-  		       
+  		train: speed     
   	}
   });
 
